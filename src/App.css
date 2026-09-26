@@ -1,8 +1,17 @@
 .page {
   min-height: 100vh;
   display: flex;
-  justify-content: center;
-  padding: 48px 20px;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 24px 20px 48px;
+}
+
+.page-bar {
+  width: 100%;
+  max-width: 340px;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .card-stack {
@@ -10,5 +19,5 @@
   max-width: 340px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: var(--card-gap);
 }

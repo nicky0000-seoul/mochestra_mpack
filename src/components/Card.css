@@ -1,14 +1,14 @@
 .card {
-  background: rgba(255, 255, 255, 0.14);
-  border-radius: 28px;
+  background: var(--surface-raised);
+  border-radius: var(--radius-card);
   padding: 28px 24px 18px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.24), inset 0 1px 0 rgba(255, 255, 255, 0.35);
+  box-shadow: var(--card-shadow);
   display: flex;
   flex-direction: column;
   gap: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.35);
-  -webkit-backdrop-filter: blur(16px) saturate(140%);
-  backdrop-filter: blur(16px) saturate(140%);
+  border: 1px solid var(--card-border);
+  -webkit-backdrop-filter: var(--card-blur);
+  backdrop-filter: var(--card-blur);
 }
 
 .card-header {
@@ -19,8 +19,8 @@
 
 .card-title {
   font-size: 20px;
-  font-weight: 600;
-  color: #e1de28e0; 
+  font-weight: 700;
+  color: var(--accent);
 }
 
 .icon-button {
@@ -41,29 +41,31 @@
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.05em;
-  color: #9a9488;
+  color: var(--ink-muted);
 }
 
 .card-date {
   flex: 1;
   font-size: 14px;
-  color: #e1de28e0;
+  color: var(--accent-strong);
 }
 
 .close-button {
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  border: 1.5px solid #1f2a44;
-  background: #fff;
-  color: #1f2a44;
+  border: 1px solid var(--inner-border);
+  background: var(--surface-inner);
+  color: var(--ink-soft);
   font-size: 14px;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: background 0.15s, color 0.15s;
 }
 
 .close-button:hover {
-  background: #f0ece2;
+  background: var(--accent-soft);
+  color: var(--ink);
 }

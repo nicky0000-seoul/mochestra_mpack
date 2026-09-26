@@ -2,6 +2,7 @@ import { useState } from "react";
 import ClockCard from "./components/ClockCard";
 import WeatherCard from "./components/WeatherCard";
 import StyleCard from "./components/StyleCard";
+import ThemeToggle from "./components/ThemeToggle";
 import { useWeather } from "./hooks/useWeather";
 import "./App.css";
 
@@ -13,7 +14,10 @@ export default function App() {
   const { weather, status } = useWeather();
 
   return (
-    <div className="page">
+    <div className="page tab-morning">
+      <div className="page-bar">
+        <ThemeToggle />
+      </div>
       <div className="card-stack">
         {showClock && <ClockCard onClose={() => setShowClock(false)} />}
         {showWeather && (
